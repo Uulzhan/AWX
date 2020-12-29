@@ -1,5 +1,5 @@
 - name: new host configuration
   hosts: all
   roles:
-    - { role: users }
-    - { role: httpd }
+    - role: users 
+    - role: httpd 
