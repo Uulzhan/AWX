@@ -1,5 +1,5 @@
   tasks:
-  - include_vars: main.yml
+  - include_vars: users.yml
 
   - name: Add users | create users, shell, home dirs
     user: name={{ item.username }} shell=/bin/bash createhome=yes comment='create with ansible'
