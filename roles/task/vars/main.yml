@@ -1,0 +1,10 @@
+ vars:
+    users:
+      - username: nuri
+        use_sudo: yes
+
+      - username: akylbek
+        use_sudo: yes
+
+      - username: uulka
+        use_sudo: yes  
