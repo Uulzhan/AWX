@@ -1,25 +1,11 @@
 ---
 - hosts: all
-  become: yes
-  gather_facts: no
-  tasks:
-  - name: Apache latest version installation
-    dnf:
+  - name: install httpd
+    yum: 
       name: httpd
       state: latest
-  - name: Enable service to start on boot up
+  - name: start httpd
     service:
       name: httpd
       state: started
-  - name: Create firewall rule for apache service
-    firewalld:
-      service: http
-      zone: public
-      permanent: yes
-      immediate: yes
-      state: enabled
-  handlers:
-  - name: Restart apache service
-    service:
-      name: httpd
-      state: restarted
+      enabled: yes
